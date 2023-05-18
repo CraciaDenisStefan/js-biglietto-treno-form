@@ -9,21 +9,22 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Tiket</title>
 </head>
-<body>
+<body class="bg-danger">
+    <!-- Inizio row richiesta dati -->
     <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
     <div class="container">
-        <div class="row form-group border rounded justify-content-center g-5 py-4">            
+        <div class="row form-group border rounded justify-content-center g-5 py-4 mb-3">            
                 <div class="col-3 text-center">
-                    <label for="nome_cognome" class="form-label">Nome Cognome</label>
-                    <input type="text" class="form-control" id="nome_cognome">
+                    <label for="nome_cognome" class="form-label text-danger">Nome Cognome</label>
+                    <input type="text" class="form-control border-danger text-center" id="nome_cognome">
                 </div>
                 <div class="col-3 text-center">
-                    <label for="km_utente" class="form-label">km da percorrere</label>
-                    <input type="text" class="form-control" id="km_utente">
+                    <label for="km_utente" class="form-label text-danger">km da percorrere</label>
+                    <input type="text" class="form-control border-danger text-center" id="km_utente">
                 </div>
                 <div class="col-3 text-center">
-                    <label for="citta" class="form-label">Fascia d'eta</label>
-                    <select class="form-select" id="eta">
+                    <label for="citta" class="form-label border-danger text-center text-danger">Fascia d'eta</label>
+                    <select class="form-select border-danger " id="eta">
                         <option value="Maggiorenne">Maggiorenne</option>
                         <option value="Minorenne">Minorenne</option>
                         <option value="Over 65">Over 65</option>
@@ -31,15 +32,19 @@
                 </div>
 
                 <div class="col-12 text-center">
-                    <button type="submit"  id="genera" value="">Genera</button>
-                    <button type="reset" id="annulla" value="">Anulla</button>
+                    <button type="submit"  id="genera" class="btn bck_btn text-danger " value="">Genera</button>
+                    <button type="reset" id="annulla" class="btn bck_btn  text-danger " value="">Anulla</button>
                 </div>
         </div>
-        <div class="row justify-content-center g-5 p-4">
-            <table class="table table-borderless border">
+
+        <h1>IL TUO BIGLIETTO</h1>
+        <!-- Inizio row biglietto stampato -->
+        <div class="row justify-content-center p-4">
+            <h3>DETTAGLIO PASSEGGERI</h3>
+            <table class="table table-borderless border border-secondary border-2 border-end-0">
                 <thead>
                   <tr>
-                    <th scope="col" class="fs-5">Nome Passeggero</th>
+                    <th scope="col" class="fs-5 bg-secondary">NOME PASSEGGERO</th>
                     <th scope="col">Offerta</th>
                     <th scope="col">Carrozza</th>
                     <th scope="col">Codice CP</th>
@@ -48,11 +53,11 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td></td>
-                    <td id="tipo_biglietto"></td>
-                    <td id="numero_carrozza">5</td>
-                    <td id="codice_cp"></td>
-                    <td id="prezzo_biglietto"></td>
+                    <td id="nome_passeggero" class="bg-secondary"> dede</td>
+                    <td id="tipo_biglietto" class="pt-4"></td>
+                    <td id="numero_carrozza" class="pt-4">5</td>
+                    <td id="codice_cp" class="pt-4"></td>
+                    <td id="prezzo_biglietto" class="pt-4"></td>
                   </tr>
                 </tbody>
             </table>
