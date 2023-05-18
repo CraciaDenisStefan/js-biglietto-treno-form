@@ -21,6 +21,27 @@ button.addEventListener(`click`, function(){
         prezzo = (prezzo - sconto_40);
             console.log(prezzo)
         }
+
+     if(isNaN(input_km) || !isNaN(input_nome))  {
+        alert(`I valori da te inseriti non sono accettati!`)
+        location.reload()
+     }
+
+     if (document.getElementById("nome_cognome").value.length < 6){
+        alert(`Numero di carrateri inferiore al minimo !`)  
+        location.reload() 
+     }
+    
+
+    document.getElementById(`nome_passeggero`).innerHTML = input_nome;
+    document.getElementById(`tipo_biglietto`).innerHTML = sel_eta;
+    document.getElementById(`prezzo_biglietto`).innerHTML = `${(prezzo).toFixed(2)}€`;
+
+    let n_car = Math.floor(Math.random() * 10 +1);
+    document.getElementById(`numero_carrozza`).innerHTML = n_car;
+    let cp = Math.floor(Math.random() * 10000 +1);
+    document.getElementById(`codice_cp`).innerHTML = cp;
+    
 })
     
 

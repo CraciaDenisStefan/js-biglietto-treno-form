@@ -13,7 +13,7 @@
     <!-- Inizio row richiesta dati -->
     <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
     <div class="container">
-        <div class="row form-group border rounded justify-content-center g-5 py-4 mb-3">            
+        <form class="row  border rounded justify-content-center g-5 py-4 mb-3">                     
                 <div class="col-3 text-center">
                     <label for="nome_cognome" class="form-label text-danger">Nome Cognome</label>
                     <input type="text" class="form-control border-danger text-center" id="nome_cognome">
@@ -23,20 +23,18 @@
                     <input type="text" class="form-control border-danger text-center" id="km_utente">
                 </div>
                 <div class="col-3 text-center">
-                    <label for="citta" class="form-label border-danger text-center text-danger">Fascia d'eta</label>
+                    <label for="eta" class="form-label border-danger text-center text-danger">Fascia d'eta</label>
                     <select class="form-select border-danger " id="eta">
                         <option value="Maggiorenne">Maggiorenne</option>
                         <option value="Minorenne">Minorenne</option>
                         <option value="Over 65">Over 65</option>
                     </select>
                 </div>
-
-                <div class="col-12 text-center">
-                    <button type="submit"  id="genera" class="btn bck_btn text-danger " value="">Genera</button>
-                    <button type="reset" id="annulla" class="btn bck_btn  text-danger " value="">Anulla</button>
-                </div>
-        </div>
-
+            <div class="col-12 text-center">
+                <button type="button"  id="genera" class="btn bck_btn text-danger " value="">Genera</button>
+                <button type="reset"  id="annulla" class="btn bck_btn  text-danger " value="">Anulla</button>
+            </div>
+        </form>
         <h1>IL TUO BIGLIETTO</h1>
         <!-- Inizio row biglietto stampato -->
         <div class="row justify-content-center p-4">
@@ -53,9 +51,9 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td id="nome_passeggero" class="bg-secondary"> dede</td>
+                    <td id="nome_passeggero" class="bg-secondary"></td>
                     <td id="tipo_biglietto" class="pt-4"></td>
-                    <td id="numero_carrozza" class="pt-4">5</td>
+                    <td id="numero_carrozza" class="pt-4"></td>
                     <td id="codice_cp" class="pt-4"></td>
                     <td id="prezzo_biglietto" class="pt-4"></td>
                   </tr>
